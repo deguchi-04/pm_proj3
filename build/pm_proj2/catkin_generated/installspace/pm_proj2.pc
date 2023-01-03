@@ -1,0 +1,8 @@
+prefix=/home/percmap/project_pm2/install
+
+Name: pm_proj2
+Description: Description of pm_proj2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
