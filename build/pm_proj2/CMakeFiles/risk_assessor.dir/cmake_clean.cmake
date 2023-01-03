@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/risk_assessor.dir/src/risk_assessor.cpp.o"
-  "/home/percmap/project_pm2/devel/lib/pm_proj2/risk_assessor.pdb"
-  "/home/percmap/project_pm2/devel/lib/pm_proj2/risk_assessor"
+  "/home/percmap/pm_proj3/devel/lib/pm_proj2/risk_assessor.pdb"
+  "/home/percmap/pm_proj3/devel/lib/pm_proj2/risk_assessor"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/percmap/project_pm2/src/pm_proj2
+# Install script for directory: /home/percmap/pm_proj3/src/pm_proj2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/percmap/project_pm2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/percmap/pm_proj3/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,32 +38,32 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2/cmake" TYPE FILE FILES
-    "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2Config.cmake"
-    "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2Config-version.cmake"
+    "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2Config.cmake"
+    "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2" TYPE FILE FILES "/home/percmap/project_pm2/src/pm_proj2/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2" TYPE FILE FILES "/home/percmap/pm_proj3/src/pm_proj2/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2/cmake" TYPE FILE FILES
-    "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2Config.cmake"
-    "/home/percmap/project_pm2/build/pm_proj2/catkin_generated/installspace/pm_proj2Config-version.cmake"
+    "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2Config.cmake"
+    "/home/percmap/pm_proj3/build/pm_proj2/catkin_generated/installspace/pm_proj2Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2" TYPE FILE FILES "/home/percmap/project_pm2/src/pm_proj2/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pm_proj2" TYPE FILE FILES "/home/percmap/pm_proj3/src/pm_proj2/package.xml")
 endif()
 

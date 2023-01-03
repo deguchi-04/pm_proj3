@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/detector.dir/src/detector.cpp.o"
-  "/home/percmap/project_pm2/devel/lib/pm_proj2/detector.pdb"
-  "/home/percmap/project_pm2/devel/lib/pm_proj2/detector"
+  "/home/percmap/pm_proj3/devel/lib/pm_proj2/detector.pdb"
+  "/home/percmap/pm_proj3/devel/lib/pm_proj2/detector"
 )
 
 # Per-language clean rules from dependency scanning.
