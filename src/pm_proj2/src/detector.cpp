@@ -44,6 +44,10 @@ void callback_point_cloud(const sensor_msgs::PointCloud2ConstPtr &pcl_msg)
     float min_dist, dist;
     std_msgs::Float32 Dist;
     min_dist = INFINITY;
+
+    pcl::CentroidPoint<pcl::PointXYZ> centroid_save;
+
+
     for (const auto &cluster : cluster_indices)
     {
         pcl::CentroidPoint<pcl::PointXYZ> centroid;
@@ -60,14 +64,26 @@ void callback_point_cloud(const sensor_msgs::PointCloud2ConstPtr &pcl_msg)
 
         //ref: https://pointclouds.org/documentation/classpcl_1_1_centroid_point.html
         centroid.get(center);
-        std::cout << center.x << " " << center.y << " " << center.z << std::endl;
+        //std::cout << center.x << " " << center.y << " " << center.z << std::endl;
         dist = pcl::euclideanDistance(origin, center);
         if (dist < min_dist)
         {
             min_dist = dist;
             *result_pcl = *cloud_cluster;
+            centroid_save = centroid;
         }
     }
+    
+    pcl::PointXYZ center_save;
+    geometry_msgs::Point distance;
+    centroid_save.get(center_save);
+    distance.x = center_save.x;
+    distance.y = center_save.y;
+    distance.z = center_save.z;
+    file.open("positions.txt", std::ios::app);
+    file << center_save.x << " " << center_save.y << " " << ros::Time::now() << "\n";
+    file.close();
+    std::cout << center_save.x << " " << center_save.y << " " << ros::Time::now() << "\n";
 
 
     // ref: https://pcl.readthedocs.io/en/latest/moment_of_inertia.html
@@ -179,13 +195,13 @@ void callback_point_cloud(const sensor_msgs::PointCloud2ConstPtr &pcl_msg)
     marker.points.push_back(P_4);
     marker.points.push_back(P_8);
 
-    
 
     sensor_msgs::PointCloud2 output;
     result_pcl->header.frame_id = "os_sensor";
     pcl::toROSMsg(*result_pcl, output);
     pub_bb.publish(marker);
     pub_obs.publish(output);
+    pub_dist.publish(distance);
 }
 
 int main(int argc, char **argv)
@@ -199,9 +215,10 @@ int main(int argc, char **argv)
     // Publishers
     pub_obs = n.advertise<sensor_msgs::PointCloud2>("detector/obstacle", 1);
     pub_bb = n.advertise<visualization_msgs::Marker>("detector/bbox", 1);
+    pub_dist = n.advertise<geometry_msgs::Point>("detector/dist", 1);
 
     
-        ros::spin();
+    ros::spin();
     
     return 0;
 }
